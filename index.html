@@ -1,622 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5BB8W2X');</script>
-  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Widdowson — Finance & Credit</title>
+  <meta name="description" content="Thomas Widdowson. Finance, credit, and investment analysis. Manchester to Greenwich." />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Tom's Portfolio</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- Add this code for background image -->
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+ 
   <style>
+    :root {
+      --bg: #0a0907;
+      --bg-elev: #14120e;
+      --bg-card: #16140f;
+      --line: rgba(232, 184, 75, 0.14);
+      --line-soft: rgba(255, 255, 255, 0.07);
+      --gold: #e8b84b;
+      --gold-dim: #b8923a;
+      --green: #3ddc84;
+      --red: #ff5d52;
+      --text: #f4efe4;
+      --text-dim: #9a958a;
+      --text-faint: #615d54;
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+ 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+ 
     body {
-      background-image: url("assets/img/background/bg7.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-
-    /*--------------------------------------------------------------
-    # Experience
-    --------------------------------------------------------------*/
-    .portfolio-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .portfolio-item {
-      width: 100%;
-      padding: 15px;
-    }
-
-    .img-fluid {
-      background-color: transparent;
-    }
-
-    .portfolio-wrap {
-      width: 100%;
-      height: 200px;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .portfolio-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    /*--------------------------------------------------------------
-    # Services
-    --------------------------------------------------------------*/
-    .services .icon-box {
-      text-align: center;
-      background: #09203a;
-      padding: 40px 40px;
-      transition: all ease-in-out 0.3s;
-      margin: 10px
-    }
-
-    .services .icon-box .icon {
-      margin: 0 auto;
-      width: 64px;
-      height: 64px;
-      background: #1c7d32;
-      border-radius: 5px;
-      transition: all .3s ease-out 0s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      transform-style: preserve-3d;
-    }
-
-    .services .icon-box .icon i {
-      color: #fff;
-      font-size: 28px;
-    }
-
-    .services .icon-box .icon::before {
-      position: absolute;
-      content: '';
-      left: -8px;
-      top: -8px;
-      height: 100%;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 5px;
-      transition: all .3s ease-out 0s;
-      transform: translateZ(-1px);
-    }
-
-    .services .icon-box h4 {
-      font-weight: 700;
-      margin-bottom: 15px;
-      font-size: 24px;
-    }
-
-    .services .icon-box h4 a {
-      color: #fff;
-    }
-
-    .services .icon-box p {
-      line-height: 24px;
-      font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    .services .icon-box:hover {
-      background: #042e5f;
-      border-color: #1c7d32;
-    }
-
-    .services .icon-box:hover .icon {
-      background: #fff;
-    }
-
-    .services .icon-box:hover .icon i {
-      color: #1c7d32;
-    }
-
-    .services .icon-box:hover .icon::before {
-      background: #35e888;
-    }
-
-    .services .icon-box:hover h4 a,
-    .services .icon-box:hover p {
-      color: #12d640;
-    }
-
-
-    @media (max-width: 768px) {
-      .services .icon-box {
-        width: 100%;
-        margin: 0 auto 20px auto;
-      }
-
-      .services .icon-box[data-aos-delay="100"] {
-        animation-delay: 200ms !important;
-      }
-
-      .services .icon-box[data-aos-delay="200"] {
-        animation-delay: 400ms !important;
-      }
-    }
-
-    /*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-    .portfolio .portfolio-item {
-      margin-bottom: 30px;
-    }
-
-    .portfolio #portfolio-flters {
-      padding: 0;
-      margin: 0 auto 15px auto;
-      list-style: none;
-      text-align: center;
-      border-radius: 50px;
-      padding: 2px 15px;
-    }
-
-    .portfolio #portfolio-flters li {
-      cursor: pointer;
-      display: inline-block;
-      padding: 8px 16px 10px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-      margin: 0 3px 10px 3px;
-      transition: all 0.3s ease-in-out;
-      border-radius: 4px;
-    }
-
-    .portfolio #portfolio-flters li:hover,
-    .portfolio #portfolio-flters li.filter-active {
-      background: #1c7d32;
-    }
-
-    .portfolio #portfolio-flters li:last-child {
-      margin-right: 0;
-    }
-
-    .portfolio .portfolio-wrap {
-      transition: 0.3s;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      background: #09203a;
-      padding: 20px;
-    }
-
-    .portfolio .portfolio-wrap::before {
+ 
+    body::before {
       content: "";
-      background: rgba(0, 0, 0, 0.8);
-      position: absolute;
-      left: 30px;
-      right: 30px;
-      top: 30px;
-      bottom: 30px;
-      transition: all ease-in-out 0.3s;
-      z-index: 2;
-      opacity: 0;
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(232, 184, 75, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 184, 75, 0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none; z-index: 0;
     }
-
-    .portfolio .portfolio-wrap .portfolio-info {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      text-align: center;
-      z-index: 3;
-      transition: all ease-in-out 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+ 
+    #glow {
+      position: fixed; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 184, 75, 0.10), transparent 65%);
+      pointer-events: none; transform: translate(-50%, -50%); z-index: 0;
+      transition: opacity 0.4s ease; will-change: transform;
     }
-
-    .portfolio .portfolio-wrap .portfolio-info::before {
-      display: block;
-      content: "";
-      width: 48px;
-      height: 48px;
-      position: absolute;
-      top: 35px;
-      left: 35px;
-      border-top: 3px solid #fff;
-      border-left: 3px solid #fff;
-      transition: all 0.5s ease 0s;
-      z-index: 9994;
+ 
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 2; }
+ 
+    .eyebrow {
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold);
+      display: inline-flex; align-items: center; gap: 10px;
     }
-
-    .portfolio .portfolio-wrap .portfolio-info::after {
-      display: block;
-      content: "";
-      width: 48px;
-      height: 48px;
-      position: absolute;
-      bottom: 35px;
-      right: 35px;
-      border-bottom: 3px solid #fff;
-      border-right: 3px solid #fff;
-      transition: all 0.5s ease 0s;
-      z-index: 9994;
+    .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--gold); display: inline-block; }
+ 
+    /* ===== boot ===== */
+    #boot {
+      position: fixed; inset: 0; z-index: 999; background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 14px; color: var(--green);
+      transition: opacity 0.6s ease;
     }
-
-    .portfolio .portfolio-wrap .portfolio-info h4 {
-      font-size: 20px;
-      color: #fff;
-      font-weight: 600;
+    #boot .boot-inner { width: min(460px, 84vw); }
+    #boot .line { opacity: 0; }
+    #boot .bar { height: 3px; background: var(--line-soft); border-radius: 2px; margin-top: 18px; overflow: hidden; }
+    #boot .bar i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 1.4s ease; }
+    #boot.done { opacity: 0; pointer-events: none; }
+ 
+    /* ===== ticker ===== */
+    .ticker {
+      position: fixed; top: 0; left: 0; right: 0; height: 38px;
+      background: var(--bg-elev); border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; overflow: hidden; z-index: 100;
+      font-family: var(--mono); font-size: 12px;
     }
-
-    .portfolio .portfolio-wrap .portfolio-info p {
-      color: #ffffff;
-      font-size: 14px;
-      text-transform: uppercase;
-      padding: 0;
-      margin: 0;
+    .ticker-live {
+      flex: 0 0 auto; padding: 0 16px; height: 100%;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--bg); border-right: 1px solid var(--line);
+      color: var(--gold); letter-spacing: 0.12em; z-index: 2;
     }
-
-    .portfolio .portfolio-wrap .portfolio-links {
-      text-align: center;
-      z-index: 4;
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 1.6s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .ticker-track { display: flex; white-space: nowrap; animation: scroll 42s linear infinite; will-change: transform; }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .tick { padding: 0 22px; color: var(--text-dim); }
+    .tick b { color: var(--text); font-weight: 500; }
+    .tick .gd { color: var(--gold); }
+ 
+    /* ===== nav ===== */
+    nav {
+      position: fixed; top: 38px; left: 0; right: 0; z-index: 90;
+      backdrop-filter: blur(14px); background: rgba(10, 9, 7, 0.72);
+      border-bottom: 1px solid var(--line-soft); transition: transform 0.4s ease;
     }
-
-    .portfolio .portfolio-wrap .portfolio-links a {
-      color: #fff;
-      margin: 0 2px;
-      font-size: 28px;
-      display: inline-block;
-      transition: 0.3s;
+    .nav-inner { max-width: 1080px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em; color: var(--text); }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { border: 1px solid var(--gold); color: var(--gold) !important; padding: 7px 16px; border-radius: 2px; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--gold); color: var(--bg) !important; }
+    .menu-btn { display: none; background: none; border: none; color: var(--text); font-family: var(--mono); cursor: pointer; }
+ 
+    /* ===== hero ===== */
+    header { min-height: 100vh; display: flex; align-items: center; padding: 150px 0 90px; position: relative; }
+    #heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.55; pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; width: 100%; position: relative; z-index: 2; }
+    .hero-name {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(48px, 9vw, 104px); line-height: 0.92; letter-spacing: -0.03em; margin: 22px 0 22px;
     }
-
-    .portfolio .portfolio-wrap .portfolio-links a:hover {
-      color: #63eda3;
+    .hero-name .ln { display: block; overflow: hidden; }
+    .hero-name .ln span { display: inline-block; transform: translateY(110%); }
+    .booted .hero-name .ln span { animation: rise 0.9s cubic-bezier(.16,1,.3,1) forwards; }
+    .booted .hero-name .ln:nth-child(2) span { animation-delay: 0.12s; }
+    @keyframes rise { to { transform: translateY(0); } }
+    .hero-name em { font-style: normal; color: var(--gold); }
+ 
+    .clocks { display: flex; gap: 28px; margin-bottom: 22px; }
+    .clock { font-family: var(--mono); }
+    .clock .city { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-faint); }
+    .clock .time { font-size: 18px; color: var(--gold); margin-top: 2px; font-weight: 500; }
+    .clock .time .sec { color: var(--text-dim); font-size: 14px; }
+ 
+    .hero-role { font-family: var(--mono); font-size: clamp(15px, 2vw, 20px); color: var(--text-dim); min-height: 1.6em; margin-bottom: 26px; }
+    .hero-role .typed { color: var(--gold); }
+    .hero-role .caret { display: inline-block; width: 9px; height: 1.05em; background: var(--gold); vertical-align: -2px; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+ 
+    .hero-desc { color: var(--text-dim); font-size: 16px; max-width: 460px; margin-bottom: 36px; }
+    .hero-desc b { color: var(--text); font-weight: 500; }
+ 
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn { font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; padding: 13px 24px; border-radius: 2px; cursor: pointer; transition: background 0.22s, color 0.22s, border-color 0.22s; display: inline-flex; align-items: center; gap: 9px; will-change: transform; }
+    .btn-primary { background: var(--gold); color: var(--bg); border: 1px solid var(--gold); font-weight: 500; }
+    .btn-primary:hover { background: transparent; color: var(--gold); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+ 
+    .terminal { background: var(--bg-card); border: 1px solid var(--line); border-radius: 6px; font-family: var(--mono); font-size: 13px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .term-bar { background: var(--bg-elev); padding: 10px 14px; display: flex; align-items: center; gap: 7px; border-bottom: 1px solid var(--line-soft); }
+    .term-bar i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .term-bar .r{background:#ff5d52} .term-bar .y{background:#e8b84b} .term-bar .g{background:#3ddc84}
+    .term-bar small { margin-left: auto; color: var(--text-faint); font-size: 11px; }
+    .term-body { padding: 18px 16px; line-height: 1.9; }
+    .term-body .pre { color: var(--gold); }
+    .term-body .cm { color: var(--text-faint); }
+    .term-body .ok { color: var(--green); }
+    .term-body .k { color: var(--text-dim); }
+ 
+    /* ===== sections ===== */
+    section { padding: 100px 0; position: relative; }
+    .sec-head { margin-bottom: 52px; }
+    .sec-head h2 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 5vw, 48px); letter-spacing: -0.02em; margin-top: 14px; }
+ 
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+ 
+    .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 54px; align-items: start; }
+    .photo-frame { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+    .photo-frame img { width: 100%; display: block; filter: grayscale(0.35) contrast(1.05); transition: filter 0.5s; }
+    .photo-frame:hover img { filter: grayscale(0) contrast(1); }
+    .photo-frame::after { content: "GREENWICH, CT"; position: absolute; bottom: 0; left: 0; right: 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; padding: 10px 14px; color: var(--gold); background: linear-gradient(transparent, rgba(10,9,7,0.92)); }
+    .about-text p { color: var(--text-dim); margin-bottom: 20px; font-size: 16px; }
+    .about-text b { color: var(--text); font-weight: 500; }
+    .about-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+    .meta-item { border-left: 2px solid var(--gold); padding-left: 14px; }
+    .meta-item .l { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-faint); }
+    .meta-item .v { font-size: 15px; color: var(--text); margin-top: 3px; }
+ 
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-top: 56px; }
+    .stat { background: var(--bg-card); padding: 30px 24px; text-align: center; }
+    .stat .num { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 5vw, 50px); color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+    .stat .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-top: 10px; }
+ 
+    .log { display: flex; flex-direction: column; }
+    .row { display: grid; grid-template-columns: 130px 1fr 44px; gap: 26px; align-items: center; padding: 28px 4px; border-top: 1px solid var(--line-soft); cursor: pointer; transition: background 0.25s; }
+    .row:last-child { border-bottom: 1px solid var(--line-soft); }
+    .row:hover { background: rgba(232,184,75,0.04); }
+    .row .logo { height: 46px; display: flex; align-items: center; }
+    .row .logo img { max-height: 46px; max-width: 120px; object-fit: contain; filter: grayscale(1) brightness(1.6); opacity: 0.8; transition: all 0.3s; }
+    .row:hover .logo img { filter: none; opacity: 1; }
+    .row .mid h3 { font-family: var(--display); font-size: 21px; font-weight: 500; }
+    .row .mid .tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .row .mid .loc { font-family: var(--mono); font-size: 12px; color: var(--text-faint); margin-top: 4px; }
+    .row .arrow { font-family: var(--mono); color: var(--text-faint); text-align: right; transition: all 0.3s; font-size: 18px; }
+    .row:hover .arrow { color: var(--gold); }
+    .row .detail { grid-column: 1 / -1; max-height: 0; overflow: hidden; transition: max-height 0.45s ease; color: var(--text-dim); font-size: 15px; }
+    .row.open .detail { max-height: 320px; }
+    .row .detail ul { list-style: none; padding: 18px 0 4px; margin: 0; }
+    .row .detail li { padding: 7px 0 7px 22px; position: relative; }
+    .row .detail li::before { content: "\25B8"; position: absolute; left: 0; color: var(--gold); }
+    .row.open .arrow { transform: rotate(90deg); color: var(--gold); }
+ 
+    .edu-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+    .edu-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 6px; padding: 30px; transition: border-color 0.3s, transform 0.3s; }
+    .edu-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .edu-card .top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+    .edu-card .top img { height: 44px; max-width: 120px; object-fit: contain; }
+    .edu-card .deg { font-family: var(--display); font-size: 20px; font-weight: 500; }
+    .edu-card .when { font-family: var(--mono); font-size: 12px; color: var(--gold); margin-top: 3px; }
+    .edu-card .courses { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .edu-card .chip { font-family: var(--mono); font-size: 11px; padding: 5px 10px; border: 1px solid var(--line-soft); border-radius: 2px; color: var(--text-dim); }
+    .edu-card .place { font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+ 
+    .int-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+    .int { border: 1px solid var(--line-soft); border-radius: 6px; padding: 24px 20px; transition: all 0.3s; }
+    .int:hover { border-color: var(--gold); background: rgba(232,184,75,0.04); transform: translateY(-3px); }
+    .int .ix { font-family: var(--mono); font-size: 12px; color: var(--gold); }
+    .int h4 { font-family: var(--display); font-size: 17px; font-weight: 500; margin-top: 12px; }
+ 
+    footer { padding: 90px 0 60px; border-top: 1px solid var(--line); margin-top: 40px; }
+    .foot-grid { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 30px; }
+    .foot-big { font-family: var(--display); font-size: clamp(28px, 5vw, 46px); font-weight: 600; letter-spacing: -0.02em; }
+    .foot-big a { color: var(--gold); }
+    .foot-socials { display: flex; gap: 16px; }
+    .foot-socials a { font-family: var(--mono); font-size: 13px; color: var(--text-dim); border: 1px solid var(--line); padding: 10px 16px; border-radius: 2px; transition: all 0.2s; }
+    .foot-socials a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .foot-note { font-family: var(--mono); font-size: 11px; color: var(--text-faint); margin-top: 40px; letter-spacing: 0.05em; }
+ 
+    @media (max-width: 860px) {
+      .hero-grid, .about-grid, .edu-grid { grid-template-columns: 1fr; }
+      .terminal { display: none; }
+      .stats, .int-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .menu-btn { display: block; }
+      .row { grid-template-columns: 60px 1fr 30px; gap: 14px; }
+      .row .logo img { max-width: 60px; }
     }
-
-    .portfolio .portfolio-wrap:hover::before {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 1;
+ 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      .hero-name .ln span { transform: none; }
+      #heroCanvas { display: none; }
     }
-
-    .portfolio .portfolio-wrap:hover .portfolio-info {
-      opacity: 1;
-    }
-
-    .portfolio .portfolio-wrap:hover .portfolio-info::before {
-      top: 15px;
-      left: 15px;
-    }
-
-    .portfolio .portfolio-wrap:hover .portfolio-info::after {
-      bottom: 15px;
-      right: 15px;
-    }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   </style>
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-169007209-3');
-  </script>
 </head>
-
+ 
 <body>
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-      <h1><a href="index.html">Thomas Widdowson</a></h1>
-      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
-          <li><a href="#about"><span>About</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="Thomas Widdowson Resume.pdf" target="_blank"><span>Resume</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/thomas-widdowson/" target="_blank" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-        <a href="https://www.github.com/ThomasWiddowson" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="mailto:tom.widd581@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
-      </div>
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="Headshot.jpeg" class="img-fluid" alt="Headshot">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p> Originally from Manchester, England, I am currently a Finance major at Lehigh University graduating in May 2026. 
-            I’m especially interested in credit, investing, and financial analysis, and a lot of that interest has grown through my hands on experience so far.
-            I’ve worked in commercial credit at The First Bank of Greenwich, where I analyzed borrower financials, assessed repayment capacity, and reviewed commercial 
-            real estate metrics such as NOI, DSCR, and LTV. I also spent time at 3i Group in London working with the infrastructure team, where I researched funds, built investment profiles,
-            and presented insights to management. Alongside that, I’ve had experience in financial services advisory at PKF O’Connor Davies and business operations at NexAmbit. 
-            Outside of internships, I also built my own resale business, which taught me a lot about markets, pricing, and using data to make decisions. 
-            Overall, I enjoy learning how businesses and investments actually work underneath the surface, and I’m looking to keep building that foundation as I start my career in finance.
-          </p>
-          <p>
-            Check out one of my finance projects (if the website is down please reach out and I can restart it!) : https://ceo-personalities.streamlit.app/
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Major:</strong> Finance</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Nationality:</strong> English</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Greenwich, Connecticut </li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> tom.widd581@gmail.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End About Me -->
-
-    <!-- ======= Interests ======= -->
-    <div class="interests container">
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
-            <h3>Data Visualization</h3>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="icon-box">
-            <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
-            <h3>Financial Modeling</h3>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
-            <h3>Datascience for Finance</h3>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>AI</h3>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Interests -->
-  </section><!-- End About Section -->
-
- <!-- Start Experience Section -->
-<section id="experience" class="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>Experience</h2>
-    </div>
-
-    <div class="portfolio-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app" style="padding: 15px;">
-        <center>
-          <h4>The First Bank of Greenwich</h4>
-        </center>
-        <div class="portfolio-wrap" style="height: 100%;">
-          <img src="website_images/FOB.webp" class="img-fluid" alt="The First Bank of Greenwich"
-            style="width: 100%; height: 200px; object-fit: contain;">
-          <div class="portfolio-info">
-            <div class="portfolio-links">
-              <ul style="margin: 5px;">
-                <li style="padding: 5px font-size: 14px;">Supported the commercial credit department by completing both annual reviews and renewals of revolving lines of credit across C&I and commercial real estate.</li>
-                <li style="padding: 5px font-size: 14px;">Analyzed borrower and guarantor financial statements, tax returns, and appraisals to ensure covenant compliance by calculating cash flow in Excel to assess repayment capacity and credit risk.</li>
-                <li style="padding: 5px font-size: 14px;">Reviewed commercial real estate appraisals and rent rolls to calculate NOI, DSCR, and LTV in order to evaluate property performance and collateral support.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app" style="padding: 15px;">
-        <center>
-          <h4>3i Infrastructure</h4>
-        </center>
-        <div class="portfolio-wrap" style="height: 100%;">
-          <img src="website_images/3i.png" class="img-fluid" alt="3i Infrastructure"
-            style="width: 100%; height: 200px; object-fit: contain;">
-          <div class="portfolio-info">
-            <div class="portfolio-links">
-              <ul style="margin: 5px;">
-                <li style="padding: 5px;">Completed a private equity fund review, developing investment profiles for three companies across another firm's funds, and presenting investment insights to management.</li>
-                <li style="padding: 5px;">Conducted research on multiple investment management funds in Iberia, highlighting opportunities aligned with 3i’s infrastructure investment strategy.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-6 portfolio-item filter-project" style="padding: 15px;">
-        <center>
-          <h4>NexAmbit Marketing</h4>
-        </center>
-        <div class="portfolio-wrap" style="height: 100%;">
-          <img src="website_images/NexAmbit.webp" class="img-fluid" alt="NexAmbit Marketing"
-            style="width: 100%; height: 200px; object-fit: contain;">
-          <div class="portfolio-info">
-            <div class="portfolio-links">
-              <ul style="margin: 5px;">
-                <li style="padding: 5px;">Identified and contacted potential sponsors for a business event hosted in Columbus, Ohio.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-6 portfolio-item filter-project" style="padding: 15px;">
-        <center>
-          <h4>PKF O'Connor Davies</h4>
-        </center>
-        <div class="portfolio-wrap" style="height: 100%;">
-          <img src="website_images/PKF.jpg" class="img-fluid" alt="PKF O'Connor Davies"
-            style="width: 100%; height: 200px; object-fit: contain;">
-          <div class="portfolio-info">
-            <div class="portfolio-links">
-              <ul style="margin: 5px;">
-                <li style="padding: 5px;">Assisted with the risk management section of vendor due diligence by creating vendor profiles, risk assessments, and mitigation plans.</li>
-                <li style="padding: 5px;">Summarized nine private equity firms' audited financial statements for operational due diligence reports.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <div id="glow"></div>
+ 
+  <div id="boot">
+    <div class="boot-inner">
+      <div class="line">&gt; initializing widdowson.terminal</div>
+      <div class="line">&gt; loading experience modules ........ ok</div>
+      <div class="line">&gt; mounting credit + analysis ........ ok</div>
+      <div class="line">&gt; render <span style="color:var(--gold)">ready</span></div>
+      <div class="bar"><i></i></div>
     </div>
   </div>
-</section>
-<!-- End Experience Section -->
-
-  <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
-                          <div class="container">
-                            <div class="section-title">
-                              <h2>Education</h2>
-                            </div>
-                            <div class="d-flex"> <!-- Używamy systemu siatki Bootstrap -->
-                              <!-- Lehigh University -->
-                              <div class="col-lg-6 col-12 icon-box" data-aos="fade-up">
-                                <img src="website_images/Lehigh.png" class="img-fluid" alt="Lehigh University Logo">
-                                <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>BS in Finance</em></p>
-                                <h5 style="text-align:left;padding: 0px 10px;">August 2022 - May 2026</h5>
-                                <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework:</h6>
-                                <ul style="text-align:left;color:#fff;padding: 0px 25px;">
-                                  <li>Advanced Topics - Investments</li>
-                                  <li>Advanced Topics - Financial Modeling</li>
-                                  <li>Advanced Investment Data Science for Finance</li>
-                                  <li>Advanced Topics - Financial Risk Management</li>
-                                  <li>Security Analysis and Portfolio Management</li>
-                                  <li>Investments</li>
-                                  <li>Corporate Financial Policy</li>
-                                  <li>Introduction to Finance</li>
-                                  <li>Introduction to Financial Accounting</li>
-                                  <li>Introduction to Managerial Accounting</li>
-                                </ul>
-                              </div>
-
-                              <!-- King School -->
-                              <div class="col-lg-6 col-12 icon-box" data-aos="fade-up" data-aos-delay="100">
-                                <img src="website_images/King-School.jpeg" class="img-fluid" alt="King School Logo">
-                                <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>Stamford, CT, USA</em></p>
-                                <h5 style="text-align:left;padding: 0px 10px;">2019 – 2022</h5>
-                              </div>
-                            </div>
-                          </div>
+ 
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-live"><span class="dot"></span>LIVE</div>
+    <div class="ticker-track" id="track"></div>
+  </div>
+ 
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="brand">TW<span>_</span>WIDDOWSON</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#track-record">Experience</a>
+        <a href="#education">Education</a>
+        <a href="Thomas Widdowson Resume.pdf" target="_blank" class="nav-cta">Résumé &#8599;</a>
+      </div>
+      <button class="menu-btn" aria-label="Menu">[ menu ]</button>
+    </div>
+  </nav>
+ 
+  <header id="top">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="clocks">
+            <div class="clock"><div class="city">Manchester</div><div class="time" id="clkUK">--:--</div></div>
+            <div class="clock"><div class="city">Greenwich</div><div class="time" id="clkUS">--:--</div></div>
+          </div>
+          <span class="eyebrow">Finance · Credit · Analysis</span>
+          <h1 class="hero-name">
+            <span class="ln"><span>Thomas</span></span>
+            <span class="ln"><span><em>Widdowson</em></span></span>
+          </h1>
+          <div class="hero-role"><span class="typed" id="typed"></span><span class="caret"></span></div>
+          <p class="hero-desc">
+            Finance major out of <b>Lehigh University</b>. Manchester born, Greenwich based.
+            I take apart how businesses and investments actually work underneath the surface, then put real numbers on the risk.
+          </p>
+          <div class="hero-actions">
+            <a href="#track-record" class="btn btn-primary" data-mag>View track record &rarr;</a>
+            <a href="mailto:tom.widd581@gmail.com" class="btn btn-ghost" data-mag>Get in touch</a>
+          </div>
+        </div>
+ 
+        <div class="terminal" aria-hidden="true">
+          <div class="term-bar">
+            <i class="r"></i><i class="y"></i><i class="g"></i>
+            <small>~/widdowson</small>
+          </div>
+          <div class="term-body">
+            <div><span class="pre">$</span> whoami</div>
+            <div class="cm"># finance + credit, data-driven</div>
+            <div><span class="pre">$</span> cat profile.json</div>
+            <div><span class="k">"from":</span> <span class="ok">"Manchester, UK"</span>,</div>
+            <div><span class="k">"based":</span> <span class="ok">"Greenwich, CT"</span>,</div>
+            <div><span class="k">"studies":</span> <span class="ok">"Finance @ Lehigh '26"</span>,</div>
+            <div><span class="k">"toolkit":</span> <span class="ok">["NOI","DSCR","LTV","DCF"]</span>,</div>
+            <div><span class="k">"status":</span> <span class="ok">"open to opportunities"</span></div>
+            <div style="margin-top:10px"><span class="pre">$</span> <span class="caret" style="position:relative;top:2px"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+ 
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">01 / Profile</span>
+        <h2>The short version</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div class="photo-frame">
+          <img src="Headshot.jpeg" alt="Thomas Widdowson" />
+        </div>
+        <div class="about-text">
+          <p>
+            Originally from <b>Manchester, England</b>, I moved to the US at 15 and never lost the habit of adapting fast.
+            I am especially drawn to credit, investing, and financial analysis, and most of that pull came from getting my hands dirty rather than from a textbook.
+          </p>
+          <p>
+            At <b>The First Bank of Greenwich</b> I sat in commercial credit, pulling apart borrower financials, sizing repayment capacity, and running CRE metrics like NOI, DSCR, and LTV.
+            At <b>3i Group</b> in London I worked with the infrastructure team, building investment profiles and presenting findings to management.
+            Before that, I ran my own resale business, which taught me more about pricing and markets than most classes did.
+          </p>
+          <div class="about-meta">
+            <div class="meta-item"><div class="l">Discipline</div><div class="v">Credit & Financial Analysis</div></div>
+            <div class="meta-item"><div class="l">Focus</div><div class="v">Investing & Markets</div></div>
+            <div class="meta-item"><div class="l">Origin</div><div class="v">Manchester &rarr; Greenwich</div></div>
+            <div class="meta-item"><div class="l">Experience</div><div class="v">US & UK</div></div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="stats reveal">
+        <div class="stat"><div class="num" data-to="4">0</div><div class="lbl">Firms worked</div></div>
+        <div class="stat"><div class="num" data-to="2">0</div><div class="lbl">Countries lived</div></div>
+        <div class="stat"><div class="num" data-to="3" data-suffix="+">0</div><div class="lbl">Years investing</div></div>
+        <div class="stat"><div class="num" data-to="100" data-suffix="%">0</div><div class="lbl">Self-taught reseller</div></div>
+      </div>
+    </div>
   </section>
-  <!-- End Education Section -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-
-  <script type="text/javascript">
-    var typed = new Typed('.typing', {
-      strings: ["a Finance Major", "a Fitness Enthusiast", "driven by data and instinct", "focused on Strategic Finance"],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
+ 
+  <section id="track-record">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">02 / Track Record</span>
+        <h2>Where I've put in the work</h2>
+      </div>
+      <div class="log reveal">
+ 
+        <div class="row" tabindex="0">
+          <div class="logo"><img src="website_images/FOB.webp" alt="The First Bank of Greenwich" /></div>
+          <div class="mid">
+            <div class="tag">Commercial Credit</div>
+            <h3>The First Bank of Greenwich</h3>
+            <div class="loc">Greenwich, CT</div>
+          </div>
+          <div class="arrow">&#8599;</div>
+          <div class="detail">
+            <ul>
+              <li>Ran annual reviews and renewals on revolving lines of credit across C&I and commercial real estate.</li>
+              <li>Analyzed borrower and guarantor statements, tax returns, and appraisals; built cash flow in Excel to test repayment capacity and covenant compliance.</li>
+              <li>Worked CRE appraisals and rent rolls to calculate NOI, DSCR, and LTV, judging property performance and collateral support.</li>
+            </ul>
+          </div>
+        </div>
+ 
+        <div class="row" tabindex="0">
+          <div class="logo"><img src="website_images/3i.png" alt="3i Infrastructure" /></div>
+          <div class="mid">
+            <div class="tag">Infrastructure PE</div>
+            <h3>3i Group</h3>
+            <div class="loc">London, UK</div>
+          </div>
+          <div class="arrow">&#8599;</div>
+          <div class="detail">
+            <ul>
+              <li>Completed a private equity fund review, building investment profiles for three companies and presenting insights to management.</li>
+              <li>Researched investment management funds across Iberia, surfacing opportunities aligned with 3i's infrastructure strategy.</li>
+            </ul>
+          </div>
+        </div>
+ 
+        <div class="row" tabindex="0">
+          <div class="logo"><img src="website_images/PKF.jpg" alt="PKF O'Connor Davies" /></div>
+          <div class="mid">
+            <div class="tag">Advisory</div>
+            <h3>PKF O'Connor Davies</h3>
+            <div class="loc">Financial Services</div>
+          </div>
+          <div class="arrow">&#8599;</div>
+          <div class="detail">
+            <ul>
+              <li>Built vendor profiles, risk assessments, and mitigation plans for the risk management side of due diligence.</li>
+              <li>Summarized nine private equity firms' audited financials for operational due diligence reports.</li>
+            </ul>
+          </div>
+        </div>
+ 
+        <div class="row" tabindex="0">
+          <div class="logo"><img src="website_images/NexAmbit.webp" alt="NexAmbit Marketing" /></div>
+          <div class="mid">
+            <div class="tag">Business Ops</div>
+            <h3>NexAmbit</h3>
+            <div class="loc">Columbus, OH</div>
+          </div>
+          <div class="arrow">&#8599;</div>
+          <div class="detail">
+            <ul>
+              <li>Identified and pitched potential sponsors for a business event hosted in Columbus, Ohio.</li>
+            </ul>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">03 / Education</span>
+        <h2>Foundations</h2>
+      </div>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="top">
+            <img src="website_images/Lehigh.png" alt="Lehigh University" />
+            <div>
+              <div class="deg">BS, Finance</div>
+              <div class="when">Aug 2022 &mdash; May 2026</div>
+            </div>
+          </div>
+          <div class="courses">
+            <span class="chip">Financial Modeling</span>
+            <span class="chip">Investments</span>
+            <span class="chip">Data Science for Finance</span>
+            <span class="chip">Risk Management</span>
+            <span class="chip">Security Analysis</span>
+            <span class="chip">Portfolio Management</span>
+            <span class="chip">Corporate Financial Policy</span>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="top">
+            <img src="website_images/King-School.jpeg" alt="King School" />
+            <div>
+              <div class="deg">King School</div>
+              <div class="when">2019 &mdash; 2022</div>
+            </div>
+          </div>
+          <div class="place">Stamford, CT, USA</div>
+        </div>
+      </div>
+ 
+      <div class="sec-head reveal" style="margin-top:80px">
+        <span class="eyebrow">04 / Beyond the desk</span>
+        <h2>What keeps me sharp</h2>
+      </div>
+      <div class="int-grid reveal">
+        <div class="int"><div class="ix">01</div><h4>Data Visualization</h4></div>
+        <div class="int"><div class="ix">02</div><h4>Financial Modeling</h4></div>
+        <div class="int"><div class="ix">03</div><h4>Data Science</h4></div>
+        <div class="int"><div class="ix">04</div><h4>Markets & AI</h4></div>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <span class="eyebrow">Let's talk</span>
+          <div class="foot-big" style="margin-top:16px">Open to<br><a href="mailto:tom.widd581@gmail.com">what's next.</a></div>
+        </div>
+        <div class="foot-socials">
+          <a href="https://www.linkedin.com/in/thomas-widdowson/" target="_blank">LinkedIn &#8599;</a>
+          <a href="https://www.github.com/ThomasWiddowson" target="_blank">GitHub &#8599;</a>
+          <a href="mailto:tom.widd581@gmail.com">Email &#8599;</a>
+        </div>
+      </div>
+      <div class="foot-note">&copy; 2026 Thomas Widdowson &middot; Greenwich, CT &middot; Designed & built with care</div>
+    </div>
+  </footer>
+ 
+  <script>
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+    // ticker — all true
+    (function () {
+      var items = [
+        'MANCHESTER <span class="gd">&rarr;</span> GREENWICH',
+        'LEHIGH UNIVERSITY <b>FINANCE \'26</b>',
+        '3i GROUP <b>LONDON</b> &middot; INFRASTRUCTURE',
+        'FIRST BANK OF GREENWICH <b>COMMERCIAL CREDIT</b>',
+        'PKF O\'CONNOR DAVIES <b>ADVISORY</b>',
+        'TOOLKIT <span class="gd">NOI &middot; DSCR &middot; LTV &middot; DCF</span>',
+        'C&I + CRE <b>UNDERWRITING</b>',
+        'US <span class="gd">/</span> UK',
+        'STATUS <span class="gd">OPEN TO OPPORTUNITIES</span>'
+      ];
+      var html = items.map(function (i) { return '<span class="tick">' + i + '</span>'; }).join('');
+      document.getElementById('track').innerHTML = html + html;
+    })();
+ 
+    // dual live clocks
+    (function () {
+      function fmt(tz) {
+        try {
+          var s = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(new Date());
+          var p = s.split(':');
+          return p[0] + ':' + p[1] + '<span class="sec">:' + p[2] + '</span>';
+        } catch (e) { return '--:--'; }
+      }
+      function tick() {
+        document.getElementById('clkUK').innerHTML = fmt('Europe/London');
+        document.getElementById('clkUS').innerHTML = fmt('America/New_York');
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+ 
+    // typed role
+    (function () {
+      var roles = ['a finance major', 'a credit analyst', 'driven by data and instinct', 'a fitness enthusiast', 'built for the deal'];
+      var el = document.getElementById('typed');
+      var r = 0, c = 0, del = false;
+      function tick() {
+        var word = roles[r];
+        el.textContent = word.slice(0, c);
+        if (!del && c < word.length) { c++; setTimeout(tick, 55); }
+        else if (!del && c === word.length) { del = true; setTimeout(tick, 1600); }
+        else if (del && c > 0) { c--; setTimeout(tick, 28); }
+        else { del = false; r = (r + 1) % roles.length; setTimeout(tick, 300); }
+      }
+      tick();
+    })();
+ 
+    // cursor glow
+    (function () {
+      var g = document.getElementById('glow');
+      var tx = 0, ty = 0, x = 0, y = 0;
+      window.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; });
+      (function loop() { x += (tx - x) * 0.12; y += (ty - y) * 0.12; g.style.left = x + 'px'; g.style.top = y + 'px'; requestAnimationFrame(loop); })();
+    })();
+ 
+    // magnetic buttons
+    if (!reduce) {
+      document.querySelectorAll('[data-mag]').forEach(function (b) {
+        b.addEventListener('mousemove', function (e) {
+          var r = b.getBoundingClientRect();
+          var mx = e.clientX - r.left - r.width / 2;
+          var my = e.clientY - r.top - r.height / 2;
+          b.style.transform = 'translate(' + mx * 0.25 + 'px,' + my * 0.35 + 'px)';
+        });
+        b.addEventListener('mouseleave', function () { b.style.transform = 'translate(0,0)'; });
+      });
+    }
+ 
+    // hero live market chart
+    (function () {
+      if (reduce) return;
+      var cv = document.getElementById('heroCanvas');
+      var ctx = cv.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var pts = [], W, H, GOLD = '#e8b84b';
+      function size() {
+        W = cv.clientWidth; H = cv.clientHeight;
+        cv.width = W * dpr; cv.height = H * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      size(); window.addEventListener('resize', size);
+      var n = 90, val = 0.5;
+      for (var i = 0; i < n; i++) { val += (Math.random() - 0.5) * 0.06; val = Math.max(0.15, Math.min(0.85, val)); pts.push(val); }
+      var t = 0;
+      function draw() {
+        t++;
+        if (t % 4 === 0) { val += (Math.random() - 0.5) * 0.07; val = Math.max(0.15, Math.min(0.85, val)); pts.push(val); pts.shift(); }
+        ctx.clearRect(0, 0, W, H);
+        var step = W / (n - 1);
+        ctx.beginPath();
+        for (var i = 0; i < n; i++) {
+          var x = i * step, y = H - pts[i] * H * 0.9 - H * 0.05;
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
+        var grad = ctx.createLinearGradient(0, 0, 0, H);
+        grad.addColorStop(0, 'rgba(232,184,75,0.12)');
+        grad.addColorStop(1, 'rgba(232,184,75,0)');
+        ctx.fillStyle = grad; ctx.fill();
+        ctx.beginPath();
+        for (var i = 0; i < n; i++) {
+          var x = i * step, y = H - pts[i] * H * 0.9 - H * 0.05;
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = GOLD; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.7; ctx.stroke(); ctx.globalAlpha = 1;
+        var ly = H - pts[n - 1] * H * 0.9 - H * 0.05;
+        ctx.beginPath(); ctx.arc((n - 1) * step, ly, 3, 0, Math.PI * 2); ctx.fillStyle = GOLD; ctx.fill();
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+ 
+    // scroll reveal
+    (function () {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    })();
+ 
+    // count up
+    (function () {
+      function animate(el) {
+        var to = +el.dataset.to, suf = el.dataset.suffix || '', dur = 1100, t0 = performance.now();
+        function step(t) {
+          var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(to * e) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.num[data-to]').forEach(function (el) { io.observe(el); });
+    })();
+ 
+    // expandable rows
+    document.querySelectorAll('.row').forEach(function (row) {
+      function toggle() { row.classList.toggle('open'); }
+      row.addEventListener('click', toggle);
+      row.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
     });
+ 
+    var mb = document.querySelector('.menu-btn');
+    if (mb) mb.addEventListener('click', function () { location.hash = '#about'; });
+ 
+    // hide nav on scroll down
+    (function () {
+      var last = 0, nav = document.querySelector('nav');
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        nav.style.transform = (y > last && y > 200) ? 'translateY(-120%)' : 'translateY(0)';
+        last = y;
+      });
+    })();
+ 
+    // boot sequence
+    (function () {
+      var boot = document.getElementById('boot');
+      if (reduce) { boot.remove(); document.body.classList.add('booted'); return; }
+      var lines = boot.querySelectorAll('.line'), bar = boot.querySelector('.bar i');
+      lines.forEach(function (l, i) { setTimeout(function () { l.style.opacity = 1; }, 220 * i); });
+      setTimeout(function () { bar.style.width = '100%'; }, 300);
+      setTimeout(function () {
+        boot.classList.add('done');
+        document.body.classList.add('booted');
+        setTimeout(function () { boot.remove(); }, 700);
+      }, 1900);
+    })();
   </script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
-
+ 
 </html>
-
-
-
-
-
-
-
 
